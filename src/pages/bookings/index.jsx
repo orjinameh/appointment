@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./index.css"
 import { UserContext } from '../../context/Context'
 import { NavLink, Link, useNavigate } from 'react-router-dom'

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useLayoutEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import "./index.css"
 import { Link, useNavigate } from 'react-router-dom'
 import facebook from "../../assets/svgs/facebook.svg"
@@ -11,14 +11,12 @@ const Home = () => {
   const { setIsBottomNav } = useContext(UserContext)
   useEffect(()=>{
     setIsBottomNav(false)
+    localStorage.getItem('evJwtToken')?navigate('/bookings'):''
   },[])
   const navigate = useNavigate();
   const handleClick = () =>{
     localStorage.getItem('evJwtToken')?navigate('/bookings'):navigate('/signin')
   }
-  useLayoutEffect(()=>{
-    localStorage.getItem('evJwtToken')?navigate('/bookings'): ''
-  },[])
   return (
     <div className='home-div'>
       <nav>
