@@ -68,7 +68,7 @@ const Bookings = () => {
         If it exceeds that cost, we will notify you of anything
         additional so you will have the opportunity to decide if 
         you want to proceed or decline the service(s) recommended</p>
-        <button>Continue</button>
+        <button onClick={()=>navigate('/pay')}>Continue</button>
       </div>
     </div>
   )
