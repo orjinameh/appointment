@@ -1,0 +1,13 @@
+.app-div{
+    display: flex;
+}
+
+.page-div{
+    display: flex;
+}
+
+@media (max-width:650px) {
+    .app-div{
+        display: block;
+    }
+}

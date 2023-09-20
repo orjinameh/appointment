@@ -1,0 +1,76 @@
+.pay-form{
+    background-color: var(--light);
+    box-shadow: 0px  0px 10px;
+    margin-left: 20vw;
+    margin-top: 20vh;
+    border-radius: 5px;
+    height: 60vh;
+}
+.pay-form form{
+    padding: 40px;
+    box-sizing: content-box;
+    display: grid;
+    width: 30vw;
+}
+.pay-form button{
+    background-color: var(--light);
+    color: var(--primary1);
+    font-size: 1.5vw;
+    height: 4vh;
+    margin-left: 5.5vw;
+    border-radius: 6px;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pay-form form input{
+    box-shadow: 0px  0px 10px;
+    display: flex;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin: 1vh;
+    height: 5vh;
+}
+
+@media (max-width:650px) {
+    .pay-form{
+        background-color: var(--light);
+        margin: auto;
+        border-radius: 10px;
+        box-shadow: 0px  0px 10px;
+        height: fit-content;
+        width: 90vw;
+        margin-top: 20vh;
+    }
+    .pay-form h1{
+        color: var(--primary1);
+    }
+    .pay-form form{
+        padding: 4vw;
+        box-sizing: content-box;
+        display: grid;
+        width: 92%;
+    }
+    .pay-form button{
+        background-color: var(--primary1);
+        color: var(--light);
+        font-size: 5vw;
+        height: 4vh;
+        margin: auto;
+        border-radius: 6px;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pay-form form input{
+        display: flex;
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+        margin: 1vh;
+        height: 5vh;
+    }
+}

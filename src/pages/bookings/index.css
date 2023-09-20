@@ -1,0 +1,183 @@
+
+header{
+    color: var(--dark);
+    font-size: 6.5vw;
+    font-family: myboldfont;
+}
+.book-div{
+    height: 88vh;
+    margin-top: 0vh;
+    overflow-y: hidden;
+    margin-left: 10vw;
+    width: 70vw;
+}
+.appt{
+    border-radius: 10px;
+    background-color: var(--light);
+    padding: 10px;
+    display: flex;
+    width: 67vw;
+    flex-wrap: wrap;
+    gap: 5vw;
+    box-shadow: 0px 0px 10px var(--shadow);
+    align-items: center;
+    justify-content: center;
+}
+.book-nav{
+    display: none;
+}
+.book-nav img{
+    box-shadow: 0px 0px 10px var(--shadow);
+    background-color: var(--light);
+    padding: 1vw;
+    width: 10vw;
+    border-radius: 5vw;
+}
+.more-user{
+    border: 2px solid;
+    padding: 2px;
+    background-color: var(--secondary2);
+    position: fixed;
+    right: 3vw;
+    top: 15vw;
+    /* margin-top: -2.3vh;
+    margin-left: 5vw; */
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: myboldfont;
+    gap: 10px;
+}
+
+.more-user svg{
+    width: 5vw;
+    transform: rotate(180deg);
+}
+.appt h4{
+    display: none;
+}
+.online-book{
+    margin-top: 5vh;
+    display: grid;
+    place-items: center;
+    place-content: center;
+    width: 50vw;
+}
+.online-book button{
+    font: myboldfont;
+    color: var(--light);
+    background-color: var(--primary1);
+    padding-left: 2vw;
+    padding-right: 2vw;
+    border-radius: 5px;
+    margin: auto;
+}
+.appt-items{
+    width: 18vw;
+    border-radius: 10px;
+    height: 18vw;
+    color: var(--light);
+    background-color: var(--primary1);
+    font-family: myboldfont;
+    box-shadow: 0px 0px 10px var(--shadow);
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+@media (max-width: 650px) {
+    header{
+        color: var(--dark);
+        font-size: 6.5vw;
+        font-family: myboldfont;
+    }
+    .book-div{
+        width: 100vw;
+        margin-top: 0vh;
+        margin-left: 0vw;
+        padding: 3vw;
+        overflow: hidden;
+    }
+    .appt{
+        border-radius: 10px;
+        background-color: var(--light);
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 7vw;
+        width: 93vw;
+        margin: 0vw;
+        box-shadow: 0px 0px 10px var(--shadow);
+        margin-top: 5vh;
+        align-items: center;
+        justify-content: center;
+    }
+    .book-nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--light);
+        width: 100vw;
+        box-shadow: 0px 0px 10px;
+        margin-left: -3vw;
+        margin-top: -1.4vh;
+    }
+    .book-nav img{
+        box-shadow: 0px 0px 10px var(--shadow);
+        background-color: var(--light);
+        padding: 1vw;
+        width: 10vw;
+        border-radius: 5vw;
+    }
+    .more-user{
+        border: 2px solid;
+        padding: 2px;
+        background-color: var(--secondary2);
+        position: fixed;
+        right: 3vw;
+        top: 15vw;
+        /* margin-top: -2.3vh;
+        margin-left: 5vw; */
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: myboldfont;
+        gap: 10px;
+    }
+
+    .more-user svg{
+        width: 5vw;
+        transform: rotate(180deg);
+    }
+    .appt-items{
+        width: 40vw;
+        border-radius: 10px;
+        height: 40.9vw;
+        color: var(--light);
+        background-color: var(--primary1);
+        font-family: myboldfont;
+        box-shadow: 0px 0px 10px var(--shadow);
+        display: flex;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+    .online-book{
+        margin-top: 2vh;
+        display: grid;
+        place-items: center;
+        place-content: center;
+        width: fit-content;
+    }
+    .online-book button{
+        font: myboldfont;
+        color: var(--light);
+        background-color: var(--primary1);
+        padding-left: 2vw;
+        padding-right: 2vw;
+        border-radius: 5px;
+        margin: auto;
+    }
+}

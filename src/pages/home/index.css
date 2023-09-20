@@ -1,0 +1,141 @@
+.home-div{
+    font-family: myboldfont;
+    font-size: 2vw;
+    padding-left: 0vw;
+}
+
+.lap-flex{
+    display: flex;
+}
+
+.home-right{
+    margin-top: 10vh;
+    padding-left: 2vw;
+}
+
+.home-div h5{
+    margin-bottom: 1vh;
+}
+
+.auths{
+    font-family: myboldFont;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(203, 228, 219);
+    width: 99vw;
+    border-bottom: 1px solid #000000ac;
+    font-size: 2vw;
+    padding: 2.5vw;
+    z-index: 2;
+    padding: .5vw;
+    box-sizing: content-box;
+}
+.auths a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.auths svg{
+    width: 2vw;
+}
+.book-link{
+    margin-bottom: 5vh;
+    width: 75%;
+    text-align: center;
+}
+.book-link button{
+    color: var(--light);
+    padding-left: 6px;
+    padding-right: 6px;
+    background-color: var(--primary1);
+    font-size: 1.5vw;
+    text-decoration: none;
+    width: 10vw;
+    text-align: center;
+    border-radius: 4px;
+
+}
+
+.home-div p{
+    width: 80%;
+    margin-bottom: 3vh;
+    font-size: 1vw;
+    font-family: myfont;
+}
+
+.social-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    gap: 5%;
+}
+
+.social-links img{
+    transform: translate(-35%,0%);
+    width: 5%;
+}
+
+
+@media (max-width:650px) {
+    .home-div{
+        font-size: 5vw;
+        margin-top: -9vh;
+    }
+    .home-div p{
+        font-size: 4vw;
+    }
+    .book-link{
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        margin-bottom: 0px;
+        z-index: 1;
+    }
+    .auths{
+        font-family: myboldFont;
+        color: var(--dark);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 3vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgb(203, 228, 219);
+        width: 99vw;
+        border-bottom: 1px solid #000000ac;
+        font-size: 4vw;
+        padding: 2.5vw;
+        z-index: 2;
+        padding: .5vw;
+        box-sizing: content-box;
+    }
+    .auths a{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .auths svg{
+        width: 4vw;
+    }
+    .book-link button{
+        font-size: 6vw;
+        width: 90vw;
+    }
+    .social-links img{
+        width: 10%;
+        transform: translate(50%,0%);
+    }
+}

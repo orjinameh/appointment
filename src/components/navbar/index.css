@@ -1,0 +1,38 @@
+.nav-div{
+    margin-top: 5vh;
+    margin-bottom: 3vh;
+    display: flex;
+    align-items: flex-start;
+    width: 20vw;
+    margin: 0;
+    height: 100vh;
+    font-family: myboldfont;
+    padding: 5vw;
+    background-color: var(--primary1);
+}
+
+.nav-nav{
+    width: 0vw;
+    display: grid;
+    gap: 10vh;
+}
+
+.nav-div a{
+    color: var(--light);
+    font-size: 1.6vw;
+    text-decoration: none;
+}
+
+.nav-div a.active{
+    border: 3px solid;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 8px;
+}
+
+
+@media (max-width:650px) {
+    .nav-div{
+        display: none;
+    }
+}

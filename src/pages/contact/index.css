@@ -1,0 +1,130 @@
+.contact-div{
+    display: flex;
+    margin: auto;
+    width: max-content;
+    margin-left: 8vw;
+}
+.contact-form{
+    background-color: var(--primary1);
+    margin-left: 2vw;
+    border-radius: 10px;
+    height: 60vh;
+}
+.contact-form form{
+    padding: 40px;
+    box-sizing: content-box;
+    display: grid;
+    width: 30vw;
+}
+.contact-form button{
+    background-color: var(--light);
+    color: var(--primary1);
+    font-size: 1.5vw;
+    height: 4vh;
+    margin-left: 5.5vw;
+    border-radius: 6px;
+    width: 20vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-form form input{
+    display: flex;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    margin: 1vh;
+    height: 7vh;
+}
+
+.contact-form form input:nth-child(4){
+    height: 20vh;
+}
+
+.contact1{
+    display: flex;
+}
+.contact-left svg{
+    width: 30px;
+    fill: var(--primary1);
+    background-color: var(--primary1);
+    stroke: var(--light);
+    stroke-width: 40px;
+    padding: 10px;
+    box-sizing: content-box;
+    border-radius: 5px;
+}
+
+.contact-right {
+    padding-left: 20px;
+    font-size: 1.2vw;
+}
+
+@media (max-width:650px) {
+    .contact-div{
+        display: grid;
+        margin: auto;
+        margin-top: 0vh;
+        width: 100vw;
+        place-content: center;
+    }
+    .contact-text h4{
+        text-align: center;
+    }
+    .contact-form{
+        background-color: var(--primary1);
+        margin-left: 0vw;
+        border-radius: 10px;
+        height: 50vh;
+    }
+    .contact-form form{
+        padding: 4vw;
+        box-sizing: content-box;
+        display: grid;
+        width: 92%;
+    }
+    .contact-form button{
+        background-color: var(--light);
+        color: var(--primary1);
+        font-size: 5vw;
+        height: 4vh;
+        margin: auto;
+        border-radius: 6px;
+        width: 50vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .contact-form form input{
+        display: flex;
+        padding: 10px;
+        border-radius: 6px;
+        border: none;
+        margin: 1vh;
+        height: 5vh;
+    }
+    
+    .contact-form form input:nth-child(4){
+        height: 19vh;
+    }
+    
+    .contact1{
+        display: flex;
+    }
+    .contact-left svg{
+        width: 30px;
+        fill: var(--primary1);
+        background-color: var(--primary1);
+        stroke: var(--light);
+        stroke-width: 40px;
+        padding: 10px;
+        box-sizing: content-box;
+        border-radius: 5px;
+    }
+    
+    .contact-right {
+        padding-left: 20px;
+        font-size: 4vw;
+    }
+    
+}

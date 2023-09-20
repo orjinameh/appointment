@@ -1,0 +1,94 @@
+:root{
+  --dark: black;
+  --gray: #4d4d4d;
+  --gray2: #a2a2a2;
+  --shadow: #00000030;
+  --light: #ffffff;
+  --primary1: #0059ff;
+  --primary1-shadow: rgba(255, 255, 255, 0.144);
+  --primary2: #52ab98;
+  --primary3: #071013;
+  --secondary1: #c8d8e4;
+  --secondary2: #f2f2f2;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--gray);
+  transition: all ease .8s;
+}
+
+a{
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: myFont;
+  src: url(./assets/web/webFonts/Poppins-Light.otf);
+}
+
+@font-face {
+  font-family: mySlimFont;
+  src: url(./assets/web/webFonts/Poppins-Thin.otf);
+}
+
+@font-face {
+  font-family: myBoldFont;
+  src: url(./assets/web/webFonts/Poppins-Bold.otf);
+}
+
+body{
+  color: var(--gray2);
+  background-color: var(--secondary2);
+  overflow: hidden;
+  font-family: myfont;
+}
+
+p{
+  font-family: myfont ; 
+}
+
+h1, h5{
+  color: var(--dark);
+}
+
+.ev-pic-div img{
+  object-fit: cover;
+  object-position: -4vw 0%;
+  width: 45vw;
+  height: 100vh;
+}
+
+.e-pic-div img{
+  display: none;
+}
+
+.mobile{
+  display: none;
+}
+
+@media (max-width:650px) {
+  body{
+    overflow: scroll;
+    padding-bottom: 70px;
+  }
+  .laptop{
+    display: none;
+  }
+  .ev-pic-div img{
+    display: none;
+  }
+  .e-pic-div img{
+    display: flex;
+    object-position: -4vw 0%;
+    object-fit: cover;
+    transform: translate(-2vw,0%);
+    width: 102vw;
+    height: 50vh;
+  }
+  .slim{
+      font: myfont ;
+  }
+}

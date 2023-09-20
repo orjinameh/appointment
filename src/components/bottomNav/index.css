@@ -1,0 +1,38 @@
+.bottom-nav{
+    display: none;
+}
+
+@media (max-width:650px) {
+    .bottom-nav{
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100vw;
+        padding: 2vw;
+        box-shadow: 0px 0px 30px var(--gray);
+        color: var(--primary1);
+        background-color: var(--light);
+        font-family: myboldfont;
+    }
+    .bottom-nav a{
+        display: grid;
+        place-items: center;
+        text-decoration: none;
+        color: var(--gray);
+    }
+    .bottom-nav a.active{
+        color: var(--primary1);
+    }
+    .bottom-nav svg{
+        width: 6vw;
+    }
+    .appoin svg{
+        width: 4.5vw;
+    }
+    .bottom-nav a.active svg{
+        fill: var(--primary1);
+    }
+}
