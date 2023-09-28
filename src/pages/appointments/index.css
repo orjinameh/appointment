@@ -1,0 +1,102 @@
+.appointment{
+    display: grid;
+    place-items: center;
+    width: 80vw;
+    padding-top: 3vw;
+    padding-bottom: 3vw;
+    font-family: myboldfont;
+    overflow-y: scroll;
+    height: 100vh;
+}
+.appointment header{
+    font-size: 5vw;
+    text-align: center;
+}
+.appointment-caro header{
+    color: var(--light);
+    font-size: 3vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.appointment-caro{
+    width: 40vw;
+    margin: auto;
+    background-color: var(--primary1);
+    margin-top: 1vh;
+    margin-left: 5vw;
+    border-radius: 16px;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.appointment-item{
+    display: grid;
+    place-content: start;
+    padding: 3vw;
+}
+.appointment-item p{
+    color: var(--light);
+    padding: 2vw;
+    font-family: myboldfont;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.appoint-left{
+    color: var(--light);
+    padding: 2vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+}
+.appointment-caro button{
+    color: var(--light);
+    border: 3px solid;
+    border-radius: 5px;
+}@media (max-width: 650px) {
+    .appointment{
+        width: 100vw;
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        font-family: myboldfont;
+    }
+    .appointment header{
+        text-align: center;
+    }
+    .appointment-caro header{
+        color: var(--light);
+        font-size: 6vw;
+        padding-top: 6vw;
+        padding-bottom: 6vw;
+    }
+    .appointment-caro{
+        width: 90vw;
+        margin: auto;
+        background-color: var(--primary1);
+        margin-top: 5vh;
+        border-radius: 16px;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    .appointment-item{
+        display: grid;
+        place-content: center;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    .appointment-item p{
+        color: var(--light);
+        padding: 2vw;
+        font-family: myboldfont;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    .appoint-left{
+        color: var(--light);
+        padding: 2vw;
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    .appointment-caro button{
+        color: var(--light);
+        border: 3px solid;
+        border-radius: 5px;
+    }
+}

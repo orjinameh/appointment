@@ -6,44 +6,50 @@ import Bookings from '../pages/bookings'
 import Contact from '../pages/contact'
 import Home from '../pages/home'
 import AuthNet from '../pages/auth.net'
+import Appointment from '../pages/appointments'
 
 function Routess() {
     return (
         [
             {
-                element: <About/>,
+                element: <About />,
                 id: 1,
                 path: '/about'
             },
             {
-                element: <Home/>,
+                element: <Home />,
                 id: 2,
                 path: '/'
             },
             {
-                element: <Bookings/>,
+                element: <Bookings />,
                 id: 3,
                 path: '/bookings'
             },
             {
-                element: <Contact/>,
+                element: <Contact />,
                 id: 4,
                 path: '/contact'
             },
             {
-                element: <Signin/> ,
+                element: <Signin />,
                 id: 5,
                 path: '/signin'
             },
             {
-                element: <Signup/> ,
+                element: <Signup />,
                 id: 6,
                 path: '/signup'
             },
             {
-                element: <AuthNet/> ,
+                element: <AuthNet />,
                 id: 7,
                 path: '/pay'
+            },
+            {
+                element: <Appointment />,
+                id: 8,
+                path: '/appointments'
             },
         ]
     )

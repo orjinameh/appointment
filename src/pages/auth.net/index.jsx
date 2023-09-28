@@ -28,6 +28,7 @@ const AuthNet = () => {
     <div className='pay-form'>
     <form onSubmit={handleSubmit}>
       <h1>Checkout</h1>
+      <h3>card number</h3>
       <input
         type="text"
         name="cardNumber"
@@ -36,6 +37,7 @@ const AuthNet = () => {
           setCardData({ ...cardData, cardNumber: event.target.value })
         }
       />
+      <h3>expiry date(month)</h3>
       <input
       type="text"
         name="month"
@@ -44,6 +46,7 @@ const AuthNet = () => {
           setCardData({ ...cardData, month: event.target.value })
         }
         />
+      <h3>expiry date(year)</h3>
       <input
       type="text"
         name="year"
@@ -52,6 +55,7 @@ const AuthNet = () => {
           setCardData({ ...cardData, year: event.target.value })
         }
       />
+      <h3>cvv</h3>
       <input
         type="text"
         name="cardCode"

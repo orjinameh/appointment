@@ -12,7 +12,7 @@ function Navbar({}) {
         <nav className="nav-div" >
           <div className="nav-nav">
           {/* <NavLink to='/'>Home</NavLink> */}
-          <NavLink to='/appointment'>Appointments</NavLink>
+          <NavLink to='/appointments'>Appointments</NavLink>
           <NavLink to='/bookings'>Bookings</NavLink>
           <NavLink to='/contact'>Contact</NavLink>
           <NavLink to="/"
