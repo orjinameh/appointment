@@ -66,6 +66,7 @@
         margin: auto;
         margin-top: 0vh;
         width: 100vw;
+        padding: 3vw;
         place-content: center;
     }
     .contact-text h4{

@@ -14,6 +14,7 @@ function Navbar({}) {
           <NavLink to='/appointments'>Appointments</NavLink>
           <NavLink to='/bookings'>Bookings</NavLink>
           <NavLink to='/contact'>Contact</NavLink>
+          <NavLink to='/policy'>Policy</NavLink>
           <NavLink to="/"
             onClick={() => {
               localStorage.removeItem('name');

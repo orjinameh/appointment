@@ -1,0 +1,10 @@
+@media (min-width:650px) {
+    .policy{
+        overflow-y: scroll;
+        height: 100vh;
+        padding: 3vw;
+    }
+    .policy header{
+        font-size: 2vw;
+    }
+}
