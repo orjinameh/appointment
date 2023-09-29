@@ -7,6 +7,8 @@ import Contact from '../pages/contact'
 import Home from '../pages/home'
 import AuthNet from '../pages/auth.net'
 import Appointment from '../pages/appointments'
+import Book from '../pages/book'
+import ReBook from '../pages/reBook'
 
 function Routess() {
     return (
@@ -50,6 +52,16 @@ function Routess() {
                 element: <Appointment />,
                 id: 8,
                 path: '/appointments'
+            },
+            {
+                element: <Book/>,
+                id: 9,
+                path: '/book'
+            },
+            {
+                element: <ReBook/>,
+                id: 9,
+                path: '/edit-aptn/:id'
             },
         ]
     )

@@ -28,13 +28,11 @@ const Bookings = () => {
   //     req();
   //   }
   // }, [])
-  // useEffect(()=>{
-  //   console.log(userData.appointment)
-  //   console.log(userData)
-
-  // })
+  const { setIsBottomNav, isUserIcon, setIsUserIcon } = useContext(UserContext)
+  useEffect(()=>{
+    setIsBottomNav(true);
+  })
   const navigate = useNavigate();
-  const { setIsBottomNav, setIsDisplay, isUserIcon, setIsUserIcon } = useContext(UserContext)
   return (
     <div className='book-div'>
       <nav className="book-nav">
@@ -46,7 +44,6 @@ const Bookings = () => {
               onClick={() => {
                 localStorage.removeItem('name');
                 localStorage.removeItem('evJwtToken');
-                setIsDisplay(true)
                 // setUserData({
                 //     user: '',
                 //     transactions: [],
@@ -66,7 +63,7 @@ const Bookings = () => {
           If it exceeds that cost, we will notify you of anything
           additional so you will have the opportunity to decide if
           you want to proceed or decline the service(s) recommended</p>
-        <button onClick={() => navigate('/pay')}>Continue</button>
+        <button onClick={() => navigate('/book')}>Continue</button>
       </div>
     </div>
   )

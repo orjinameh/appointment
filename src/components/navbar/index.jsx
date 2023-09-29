@@ -4,7 +4,6 @@ import "./index.css"
 import { UserContext } from '../../context/Context'
 
 function Navbar({}) {
-  const {setIsDisplay,isDisplay} = useContext(UserContext)
   return (
     <nav className='laptop nav-iv' >
       {
@@ -19,7 +18,6 @@ function Navbar({}) {
             onClick={() => {
               localStorage.removeItem('name');
               localStorage.removeItem('evJwtToken');
-              setIsDisplay(true)
               // setUserData({
               //     user: '',
               //     email: '',

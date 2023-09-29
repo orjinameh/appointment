@@ -10,7 +10,7 @@ export default function Signin() {
   useEffect(() => {
     setIsBottomNav(false)
   })
-  const { backendBaseUrl, setIsDisplay, setIsBottomNav } = useContext(UserContext)
+  const { backendBaseUrl, setIsBottomNav, token, setToken } = useContext(UserContext)
   const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -59,11 +59,11 @@ export default function Signin() {
           balance: resData.balance
         }
       });
-      localStorage.setItem('evJwtToken', (data.token));
+      setToken(data.token)
+      localStorage.setItem('evJwtToken', ('token'));
       localStorage.setItem('name', (data.name));
       localStorage.setItem('email', (data.email));
       setUserData(userData)
-      setIsDisplay(false)
       console.log(userData)
       navigate('/bookings');
       setIsBottomNav(true);

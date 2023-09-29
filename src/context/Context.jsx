@@ -5,7 +5,7 @@ export const UserContext =  createContext();
 export function UserProvider ({children}) {
     const [isBottomNav,setIsBottomNav] = useState(true)
     const [isUserIcon,setIsUserIcon] = useState(false)
-    const [isDisplay,setIsDisplay] = useState(true)
+    const [token,setToken] = useState(true)
     // const backendBaseUrl = 'http://localhost:4000'
     const backendBaseUrl = 'https://datasite-h33s.onrender.com'
     return(
@@ -13,7 +13,7 @@ export function UserProvider ({children}) {
             backendBaseUrl, 
             isBottomNav, setIsBottomNav,
             isUserIcon,setIsUserIcon,
-            isDisplay,setIsDisplay}}>
+            token,setToken}}>
             {children}
         </UserContext.Provider>
     )
