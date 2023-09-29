@@ -17,7 +17,8 @@ const Appointment = () => {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': `Bearer ${token}`
+            // 'Authorization': `Bearer $token}`
+            'Authorization': `Bearer ${localStorage.getItem('evJwtToken')}`
           }
         }
         const request = await fetch(`${backendBaseUrl}/data/me/get`, reqOpts)

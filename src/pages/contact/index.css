@@ -1,7 +1,7 @@
 .contact-div{
     display: flex;
     margin: auto;
-    width: max-content;
+    width: 70vw;
     margin-left: 8vw;
 }
 .contact-form{

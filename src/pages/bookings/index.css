@@ -1,17 +1,18 @@
-
-header{
+header {
     color: var(--dark);
     font-size: 6.5vw;
     font-family: myboldfont;
 }
-.book-div{
+
+.book-div {
     height: 88vh;
     margin-top: 0vh;
     overflow-y: hidden;
     margin-left: 10vw;
     width: 70vw;
 }
-.appt{
+
+.appt {
     border-radius: 10px;
     background-color: var(--light);
     padding: 10px;
@@ -23,17 +24,20 @@ header{
     align-items: center;
     justify-content: center;
 }
-.book-nav{
+
+.book-nav {
     display: none;
 }
-.book-nav img{
+
+.book-nav img {
     box-shadow: 0px 0px 10px var(--shadow);
     background-color: var(--light);
     padding: 1vw;
     width: 10vw;
     border-radius: 5vw;
 }
-.more-user{
+
+.more-user {
     border: 2px solid;
     padding: 2px;
     background-color: var(--secondary2);
@@ -50,21 +54,30 @@ header{
     gap: 10px;
 }
 
-.more-user svg{
+.more-user svg {
     width: 5vw;
     transform: rotate(180deg);
 }
-.appt h4{
+
+.appt h4 {
     display: none;
 }
-.online-book{
+
+.online-book {
     margin-top: 5vh;
     display: grid;
     place-items: center;
     place-content: center;
     width: 50vw;
 }
-.online-book button{
+
+@media (min-width:650px) {
+    .online-book header {
+        font-size: 2vw;
+    }
+}
+
+.online-book button {
     font: myboldfont;
     color: var(--light);
     background-color: var(--primary1);
@@ -73,7 +86,8 @@ header{
     border-radius: 5px;
     margin: auto;
 }
-.appt-items{
+
+.appt-items {
     width: 18vw;
     border-radius: 10px;
     height: 18vw;
@@ -86,20 +100,23 @@ header{
     align-items: center;
     justify-content: center;
 }
+
 @media (max-width: 650px) {
-    header{
+    header {
         color: var(--dark);
         font-size: 6.5vw;
         font-family: myboldfont;
     }
-    .book-div{
+
+    .book-div {
         width: 100vw;
         margin-top: 0vh;
         margin-left: 0vw;
         padding: 3vw;
         overflow: hidden;
     }
-    .appt{
+
+    .appt {
         border-radius: 10px;
         background-color: var(--light);
         padding: 10px;
@@ -113,7 +130,8 @@ header{
         align-items: center;
         justify-content: center;
     }
-    .book-nav{
+
+    .book-nav {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -123,14 +141,16 @@ header{
         margin-left: -3vw;
         margin-top: -1.4vh;
     }
-    .book-nav img{
+
+    .book-nav img {
         box-shadow: 0px 0px 10px var(--shadow);
         background-color: var(--light);
         padding: 1vw;
         width: 10vw;
         border-radius: 5vw;
     }
-    .more-user{
+
+    .more-user {
         border: 2px solid;
         padding: 2px;
         background-color: var(--secondary2);
@@ -147,11 +167,12 @@ header{
         gap: 10px;
     }
 
-    .more-user svg{
+    .more-user svg {
         width: 5vw;
         transform: rotate(180deg);
     }
-    .appt-items{
+
+    .appt-items {
         width: 40vw;
         border-radius: 10px;
         height: 40.9vw;
@@ -164,14 +185,16 @@ header{
         align-items: center;
         justify-content: center;
     }
-    .online-book{
+
+    .online-book {
         margin-top: 2vh;
         display: grid;
         place-items: center;
         place-content: center;
         width: fit-content;
     }
-    .online-book button{
+
+    .online-book button {
         font: myboldfont;
         color: var(--light);
         background-color: var(--primary1);

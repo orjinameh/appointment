@@ -60,7 +60,7 @@ export default function Signin() {
         }
       });
       setToken(data.token)
-      localStorage.setItem('evJwtToken', ('token'));
+      localStorage.setItem('evJwtToken', (data.token));
       localStorage.setItem('name', (data.name));
       localStorage.setItem('email', (data.email));
       setUserData(userData)

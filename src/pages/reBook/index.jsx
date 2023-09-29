@@ -24,7 +24,8 @@ const ReBook = () => {
       }),
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${token}`,
+        'Authorization': `Bearer ${localStorage.getItem('evJwtToken')}`
+        // 'Authorization': `Bearer ${token}`,
       }
     }
     const response = await fetch(api, requestOptions)

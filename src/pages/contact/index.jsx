@@ -1,8 +1,40 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import "./index.css"
 import ContactComp from'./contactComp'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  })
+
+  function onChange(e) {
+    setFormData((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value
+    })
+    )
+  }
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_d6ho5fl', 'template_fk4sbos', form.current, 'fP_wcR28LvZT36dGE')
+      .then((result) => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          message: '',
+        })
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
   return (
     <div className='contact-div'>
       <div className="contact-text">
@@ -19,18 +51,18 @@ const Contact = () => {
         <ContactComp text='' title='sales@evpro.world' svg={<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
             <path d="M64 0C28.7 0 0 28.7 0 64V352c0 35.3 28.7 64 64 64h96v80c0 6.1 3.4 11.6 8.8 14.3s11.9 2.1 16.8-1.5L309.3 416H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H64z"/>
         </svg>}/>
-        <header>
+        <h1>
         Business Hours
-        </header>
+        </h1>
         <p>Monday - Friday 12:00 noon - 6:00 PM</p>
         <p>Saturday - Sunday: Closed</p>
       </div>
       <div className="contact-form">
-        <form action="submit">
-          <input type="text" placeholder='Your name'/>
-          <input type="text" placeholder='Your email'/>
-          <input type="text" placeholder='Your phone number'/>
-          <input type="text" placeholder='message'/>
+        <form action="submit" ref={form} onSubmit={sendEmail}>
+          <input onChange={onChange} type="text" value={formData.name} name='name' placeholder='Your name'/>
+          <input onChange={onChange} type="text" value={formData.email}  name='email' placeholder='Your email'/>
+          <input onChange={onChange} type="text" value={formData.phone} name='phone' placeholder='Your phone number'/>
+          <input onChange={onChange} type="text" value={formData.message} name='message' placeholder='message'/>
           <button>Send Message</button>
         </form>
       </div>

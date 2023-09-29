@@ -55,7 +55,7 @@ const Bookings = () => {
           </div> : ''}
       </nav>
       <div className="online-book">
-        <h3>Online Book Schedule A Service Appointment</h3>
+        <header>Online Book Schedule A Service Appointment</header>
         <p >There is an $80.00 diagnostic fee that must be paid
           at the time of drop off.
           San Diego tax of 7.75% is not included but equates to 86.20.

@@ -19,7 +19,7 @@
 
 .auths{
     font-family: myboldFont;
-    color: var(--dark);
+    color: var(--light);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,7 +27,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgb(203, 228, 219);
+    background-color: var(--primary1);
     width: 99vw;
     border-bottom: 1px solid #000000ac;
     font-size: 2vw;
@@ -39,9 +39,11 @@
 .auths a{
     display: flex;
     align-items: center;
+    color: var(--light);
     justify-content: center;
 }
 .auths svg{
+    fill: var(--light);
     width: 2vw;
 }
 .book-link{
@@ -105,7 +107,7 @@
     }
     .auths{
         font-family: myboldFont;
-        color: var(--dark);
+        color: var(--light);
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -113,7 +115,7 @@
         position: fixed;
         top: 0;
         left: 0;
-        background-color: rgb(203, 228, 219);
+        background-color: var(--primary1);
         width: 99vw;
         border-bottom: 1px solid #000000ac;
         font-size: 4vw;
@@ -123,12 +125,14 @@
         box-sizing: content-box;
     }
     .auths a{
+        color: var(--light);
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .auths svg{
         width: 4vw;
+        fill: var(--light);
     }
     .book-link button{
         font-size: 6vw;

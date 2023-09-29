@@ -4,7 +4,8 @@ import { Link, useNavigate } from 'react-router-dom'
 import facebook from "../../assets/svgs/facebook.svg"
 import twitter from "../../assets/svgs/twitter.svg"
 import instagram from "../../assets/svgs/instagram.svg"
-import ev from '../../assets/photos/ev.webp'
+import ev from '../../assets/photos/accessories2.webp'
+import Slideshow from '../../components/slideshow'
 import { UserContext } from '../../context/Context'
 
 const Home = () => {
@@ -39,7 +40,12 @@ const Home = () => {
       <div className='home-right'>
         <h1>Online Booking</h1>
         <h5>Book An Appointment Today</h5>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p>
+Welcome to evpro, your trusted destination for electric vehicle repair and maintenance. With a passion for innovation and a commitment to sustainable transportation, we're here to keep your electric vehicles running smoothly.
+
+Our team of skilled technicians combines cutting-edge technology with years of experience to diagnose, repair, and maintain your electric vehicle with precision and care. We understand the unique needs of EVs and are dedicated to providing top-notch service to keep you on the road, eco-friendly and worry-free.
+
+At evpro, we're not just a repair shop; we're your partners in sustaining a cleaner, greener future. Come visit us today and experience the difference.</p>
         <div className="book-link">
           <button onClick={handleClick}>Book Now</button>
         </div>
