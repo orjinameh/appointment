@@ -6,7 +6,61 @@ import { UserDataContext } from '../../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 
 const Appointment = () => {
-  const navigate = useNavigate()
+  if (localStorage.getItem('email')!=='adminjaycrypto@gmail.com'){
+    const navigate = useNavigate()
+    const { backendBaseUrl, token } = useContext(UserContext)
+    const { setUserData, userData } = useContext(UserDataContext)
+    useEffect(() => {
+      if (localStorage.getItem('evJwtToken')) {
+        const req = async () => {
+          // setIsLoading(true);
+          const reqOpts = {
+            method: 'GET',
+            headers: {
+              'Content-Type': 'application/json',
+              // 'Authorization': `Bearer $token}`
+              'Authorization': `Bearer ${localStorage.getItem('evJwtToken')}`
+            }
+          }
+          const request = await fetch(`${backendBaseUrl}/data/me/getall`, reqOpts)
+          const json = await request.json()
+          setUserData([...json])
+          // console.log(json)
+          // json?setIsLoading(false):setIsLoading(true)
+        };
+        req();
+      }
+    }, [])
+    useEffect(() => {
+      //   console.log(userData)
+      console.log(userData)
+
+    })
+    const reversedUserData = [...userData].reverse()
+    // Date object
+    const date = new Date();
+
+    return (
+      <div className='admin-appointment'>
+        <header>Your Appointments</header>
+        <div className='admin-appointment-div'>
+          {reversedUserData.map((userData) => (
+            <div key={userData._id} className="admin-appointment-caro">
+              <div className="admin-appointment-item">
+              {date.getTime()>userData.date.getTime()?'finished':''}
+                <header>Service appointment</header>
+                <Comp svg='DATE:' title={userData.date} />
+                <Comp svg='TIME:' title={userData.time} />
+                <Comp svg='PHONE:' title={userData.phone} />
+              </div>
+            </div>
+          )
+          )}
+        </div>
+      </div>
+    )
+  }
+  else {const navigate = useNavigate()
   const { backendBaseUrl, token } = useContext(UserContext)
   const { setUserData, userData } = useContext(UserDataContext)
   useEffect(() => {
@@ -55,7 +109,7 @@ const Appointment = () => {
         )}
       </div>
     </div>
-  )
+  )}
 }
 
 export default Appointment

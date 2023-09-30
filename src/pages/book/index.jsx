@@ -1,6 +1,8 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import './index.css'
 import { UserContext } from '../../context/Context';
+import emailjs from '@emailjs/browser';
+
 
 const Book = () => {
 // const event =
@@ -34,6 +36,18 @@ const Book = () => {
     text: '',
     phone: '',
   })
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_t8jnf28', 'template_khr5q37', form.current, 'vD1Q_XJtych9zr3m9')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
   const { backendBaseUrl, token } = useContext(UserContext)
   const api = `${backendBaseUrl}/data/me/post`
   async function handleSubmit(e) {
@@ -61,6 +75,7 @@ const Book = () => {
       phone: '',
     }) : ''
     console.log(data)
+    // sendEmail(e);
   }
   function onChange(e) {
     setFormData((prevState) => ({
@@ -71,7 +86,7 @@ const Book = () => {
   }
   return (
     <div className='Book'>
-      <form action="submit" onSubmit={handleSubmit}>
+      <form action="submit" ref={form} onSubmit={handleSubmit}>
         <header>Schedule an appointment</header>
         <h3>Date:</h3>
         <input onChange={onChange} value={formData.date} type="date" name="date" id="" />
@@ -81,7 +96,7 @@ const Book = () => {
         <input onChange={onChange} value={formData.phone} type="tel" name="phone" id="" />
         <h3>Additional message:</h3>
         <textarea onChange={onChange} value={formData.text} placeholder='write any addtional info' name="text" id="" cols="30" rows="10"></textarea>
-        <button type="submit">Schedule</button>
+        <button onClick={sendEmail} type="submit">Schedule</button>
       </form>
     </div>
   )
