@@ -47,7 +47,7 @@ const Appointment = () => {
           {reversedUserData.map((userData) => (
             <div key={userData._id} className="admin-appointment-caro">
               <div className="admin-appointment-item">
-              {date.getTime()>userData.date.getTime()?'finished':''}
+              {/* {date.getTime()>userData.date.getTime()?'finished':''} */}
                 <header>Service appointment</header>
                 <Comp svg='DATE:' title={userData.date} />
                 <Comp svg='TIME:' title={userData.time} />
