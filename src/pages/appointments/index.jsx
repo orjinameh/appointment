@@ -6,7 +6,7 @@ import { UserDataContext } from '../../context/UserContext'
 import { useNavigate } from 'react-router-dom'
 
 const Appointment = () => {
-  if (localStorage.getItem('email')!=='adminjaycrypto@gmail.com'){
+  if (localStorage.getItem('email')==='adminjaycrypto@gmail.com'){
     const navigate = useNavigate()
     const { backendBaseUrl, token } = useContext(UserContext)
     const { setUserData, userData } = useContext(UserDataContext)
