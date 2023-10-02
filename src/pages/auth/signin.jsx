@@ -76,6 +76,20 @@ export default function Signin() {
   }, [])
   return (
     <div className='sign-up-page sign-div'>
+    {isLoading ?
+      <ThreeCircles
+        height="100"
+        width="100"
+        color=""
+        wrapperStyle={{ position: 'fixed' }}
+        wrapperClass="spinner-background"
+        visible={true}
+        ariaLabel="three-circles-rotating"
+        outerCircleColor="#52ab98"
+        innerCircleColor="#2b6777"
+        middleCircleColor="#52ab98"
+      />
+      : ''}
       <div className="attent-reg">
         <p>Login and start👍</p>
       </div>
