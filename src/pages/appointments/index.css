@@ -74,8 +74,6 @@
     .appointment-caro header{
         color: var(--light);
         font-size: 6vw;
-        padding-top: 6vw;
-        padding-bottom: 6vw;
     }
     .appointment-caro{
         width: 90vw;
@@ -83,8 +81,6 @@
         background-color: var(--primary1);
         margin-top: 5vh;
         border-radius: 16px;
-        padding-top: 5vw;
-        padding-bottom: 5vw;
     }
     .appointment-item{
         display: grid;
@@ -94,6 +90,7 @@
     }
     .appointment-item p{
         color: var(--light);
+        /* font-size: 3vw; */
         padding: 2vw;
         font-family: myboldfont;
         padding-top: 5vw;
@@ -102,6 +99,7 @@
     .appoint-left{
         color: var(--light);
         padding: 2vw;
+        font-size: large;
         padding-top: 5vw;
         padding-bottom: 5vw;
     }

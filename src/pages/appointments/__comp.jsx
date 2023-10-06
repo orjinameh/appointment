@@ -4,7 +4,7 @@ function Comp({ svg, title, text }) {
     return (
         <div className="contact1">
             <div className="appoint-left">
-                {svg}
+                <p>{svg}</p>
             </div>
             <div className="appoint-right">
                 <p>{title}</p>

@@ -38,8 +38,7 @@ const Book = () => {
   })
   const form = useRef();
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  const sendEmail = () => {
 
     emailjs.sendForm('service_t8jnf28', 'template_khr5q37', form.current, 'vD1Q_XJtych9zr3m9')
       .then((result) => {
@@ -57,7 +56,7 @@ const Book = () => {
       body: JSON.stringify({
         date: formData.date,
         time: formData.time,
-        location: 'ff',
+        location: '8855 Balboa Avenue, Suite D, San Diego, CA 92123',
         phone: formData.phone,
       }),
       headers: {
@@ -75,7 +74,7 @@ const Book = () => {
       phone: '',
     }) : ''
     console.log(data)
-    // sendEmail(e);
+    sendEmail();
   }
   function onChange(e) {
     setFormData((prevState) => ({
@@ -96,7 +95,7 @@ const Book = () => {
         <input onChange={onChange} value={formData.phone} type="tel" name="phone" id="" />
         <h3>Additional message:</h3>
         <textarea onChange={onChange} value={formData.text} placeholder='write any addtional info' name="text" id="" cols="30" rows="10"></textarea>
-        <button onClick={sendEmail} type="submit">Schedule</button>
+        <button type="submit">Schedule</button>
       </form>
     </div>
   )

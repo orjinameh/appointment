@@ -48,43 +48,57 @@ export default function Signup() {
         'Content-Type': 'application/json',
       }
     };
-    const Log = await fetch(`${backendBaseUrl}/data/auth/login`, requestOptions)
+    const Log = await fetch(`${backendBaseUrl}/data/auth/login`, requestUserLoginOptions)
     const log = await Log.json();
     if (response.status === 200) {
+      //get details
+      const requestOpts = {
+        method: "GET",
+        headers:{
+          'Content-Type': 'application/json',
+          'Authorizaion': `Bearer ${log.token}`
+        }
+      }
+      const link = `${backendBaseUrl}/data/me/get`
+      const resp = await fetch(link, requestOpts)
+      const resData = await resp.json();
+      console.log(resData)
       // Save jwt token to localStorage
       setUserData((prevState) => ({
         ...prevState,
-        name: log.name,
-        email: log.email,
-        token: log.token,
+        name: resData.name,
+        email: resData.email,
       }));
       localStorage.setItem('evJwtToken', (log.token));
       localStorage.setItem('name', (log.name));
+      setIsLoading(false)
+      setUserData(userData)
       navigate('/');
+      window.location.reload();
     }
 
-    const requestUserOptions = {
-      method: 'POST',
-      body: JSON.stringify({
-        user: userData.user,
-        email: userData.email,
-        transactions: userData.transactions,
-        notifications: userData.notifications,
-        balance: userData.balance,
-        plan: userData.plan,
-        refs: userData.refs,
-        totalFunding: userData.totalFunding,
-        totalSpent: userData.totalSpent,
-      }),
-      headers: {
-        'Authorization': `Bearer ${log.token}`,
-        'Content-Type': 'application/json',
-      }
-    };
-    const createUserData = await fetch(`${backendBaseUrl}/data/me/post`, requestUserOptions)
-    const UserDatas = await createUserData.json();
-    UserDatas ? setIsLoading(false) : setIsLoading(true)
-    console.log(UserDatas)
+    // const requestUserOptions = {
+    //   method: 'POST',
+    //   body: JSON.stringify({
+    //     user: userData.user,
+    //     email: userData.email,
+    //     transactions: userData.transactions,
+    //     notifications: userData.notifications,
+    //     balance: userData.balance,
+    //     plan: userData.plan,
+    //     refs: userData.refs,
+    //     totalFunding: userData.totalFunding,
+    //     totalSpent: userData.totalSpent,
+    //   }),
+    //   headers: {
+    //     'Authorization': `Bearer ${log.token}`,
+    //     'Content-Type': 'application/json',
+    //   }
+    // };
+    // const createUserData = await fetch(`${backendBaseUrl}/data/me/post`, requestUserOptions)
+    // const UserDatas = await createUserData.json();
+    // UserDatas ? setIsLoading(false) : setIsLoading(true)
+    // console.log(UserDatas)
   };
   return (
     <div className='sign-up-page sign-div'>

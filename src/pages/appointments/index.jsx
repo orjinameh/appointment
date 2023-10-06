@@ -33,12 +33,13 @@ const Appointment = () => {
     }, [])
     useEffect(() => {
       //   console.log(userData)
-      console.log(userData)
+      // console.log(userData)
 
     })
     const reversedUserData = [...userData].reverse()
     // Date object
     const date = new Date();
+    // console.log(reversedUserData)
 
     return (
       <div className='admin-appointment'>
@@ -84,17 +85,20 @@ const Appointment = () => {
       req();
     }
   }, [])
-  useEffect(() => {
-    //   console.log(userData)
-    console.log(userData)
+  // useEffect(() => {
+  //   //   console.log(userData)
+  //   // console.log(userData)
 
-  })
+  // })
   const reversedUserData = [...userData].reverse()
+  useEffect(()=>{
+    console.log(reversedUserData)
+  })
   return (
     <div className='appointment'>
       <header>Your Appointments</header>
       <div className='appointment-div'>
-        {reversedUserData.map((userData) => (
+        {reversedUserData||''?reversedUserData.map((userData) => (
           <div key={userData._id} className="appointment-caro">
             <div className="appointment-item">
               <header>Service appointment</header>
@@ -106,7 +110,7 @@ const Appointment = () => {
             </div>
           </div>
         )
-        )}
+        ):''}
       </div>
     </div>
   )}
